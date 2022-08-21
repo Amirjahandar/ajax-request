@@ -7,6 +7,8 @@ btn.addEventListener("click", function(e){
     e.preventDefault();
     let username = frm.querySelector('#txtusername').value;
     let comment = frm.querySelector('#txtcomment').value;
+    let like = frm.querySelector('#txtlike').checked;
+
 
     fetch( url, {
         method : 'post',
@@ -15,6 +17,7 @@ btn.addEventListener("click", function(e){
             {
                 'username' : username,
                 'comment' : comment,
+                'like' : like,
             }
         )
                 }

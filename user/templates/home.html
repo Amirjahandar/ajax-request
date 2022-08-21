@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 
 {% block content %}
+
+    <img src="{% static 'nicole.jpg' %}" alt="">
 
 
     <form action="{% url 'index' %}" method="post" id="frm">
@@ -10,10 +14,12 @@
         <input type="text" name="txtusername"  id="txtusername"><br>
         <label for="txtcomment">comment</label>
         <input type="text" name="txtcomment"  id="txtcomment"><br>
+        <input type="checkbox" name="txtlike" id="txtlike"><br>
         <input type="submit" value="Post"  id="btn">
     </form>
 
 
+        {{msg}}
 
 {% endblock content %}
 
