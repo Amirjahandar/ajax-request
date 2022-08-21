@@ -1,1 +1,30 @@
 {% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    <form action="{% url 'index' %}" method="post" id="frm">
+        {% csrf_token %}
+        <label for="txtusername">username</label>
+        <input type="text" name="txtusername"  id="txtusername"><br>
+        <label for="txtcomment">comment</label>
+        <input type="text" name="txtcomment"  id="txtcomment"><br>
+        <input type="submit" value="Post"  id="btn">
+    </form>
+
+
+
+{% endblock content %}
+
+
+
+
+
+<!-- 
+{% block jslink %}
+{% endblock %} -->
+
+
+
+
